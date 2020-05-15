@@ -223,6 +223,8 @@ SOFTWARE.
 primeng
 MIT
 
+primeng/calendar
+
 regenerator-runtime
 MIT
 MIT License
