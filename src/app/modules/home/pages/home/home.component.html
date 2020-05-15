@@ -1,36 +1,71 @@
-<h3 class="first">Customer Information</h3>
-<div class="ui-g ui-fluid">
-    <div class="ui-g-12 ui-md-4">
-        <div class="ui-inputgroup">
-            <span class="ui-inputgroup-addon"><i class="pi pi-user" style="line-height: 1.25;"></i></span>
-            <input type="text" pInputText placeholder="Name">
-        </div>
-    </div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <header>
+        <h1>Please fill out this form, and submit</h1>
+    </header>
+    <section>
+        <h3 class="first">Customer Information</h3>
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon"><i class="pi pi-user" style="line-height: 1.25;"></i></span>
+                    <input type="text" pInputText placeholder="Name" formControlName="name">
+                </div>
+            </div>
 
-    <div class="ui-g-12 ui-md-4">
-        <div class="ui-inputgroup">
-            <span class="ui-inputgroup-addon"><i class="pi pi-home" style="line-height: 1.25;"></i></span>
-            <input type="text" pInputText placeholder="Address">
-        </div>
-    </div>
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon"><i class="pi pi-home" style="line-height: 1.25;"></i></span>
+                    <input type="text" pInputText placeholder="Address" formControlName="address">
+                </div>
+            </div>
 
-    <div class="ui-g-12 ui-md-4">
-        <div class="ui-inputgroup">
-            <span class="ui-inputgroup-addon"><i class="pi pi-mobile" style="line-height: 1.25;"></i></span>
-            <input type="text" pInputText placeholder="Phone Number">
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon"><i class="pi pi-mobile" style="line-height: 1.25;"></i></span>
+                    <input type="text" pInputText placeholder="Phone Number" formControlName="phoneNumber">
+                </div>
+            </div>
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon"><i class="pi pi-envelope" style="line-height: 1.25;"></i></span>
+                    <input type="text" pInputText placeholder="Email" formControlName="email">
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="ui-g-12 ui-md-4">
-        <div class="ui-inputgroup">
-            <span class="ui-inputgroup-addon"><i class="pi pi-envelope" style="line-height: 1.25;"></i></span>
-            <input type="text" pInputText placeholder="Email">
-        </div>
-    </div>
-</div>
 
-<h3>Appointment</h3>
-<div class="ui-g ui-fluid">
-    <div class="ui-g-12 ui-md-4">
-        <p-calendar [showTime]="true" [showIcon]="true"></p-calendar>
-    </div>
-</div>
+        <h3 class="first">Service you want</h3>
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <p-dropdown [options]="groupedServices" formControlName="selectedService" placeholder="Select a Service" [group]="true" (onChange)="selectService($event)"></p-dropdown>
+                </div>
+            </div>
+
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <p-chips formControlName="selectedServices" (onRemove)="removeService($event)"></p-chips>
+                </div>
+            </div>
+
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <span class="ui-float-label">
+                        <textarea id="float-input" [rows]="5" [cols]="30" pInputTextarea formControlName="note"></textarea>
+                        <label for="float-input">Notes</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <h3>Appointment</h3>
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12 ui-md-4">
+                <p-calendar [showTime]="true" [showIcon]="true" formControlName="when"></p-calendar>
+            </div>
+        </div>
+    </section>
+    <br />
+    <footer>
+        <button pButton type="submit" class="ui-button-raised ui-button-rounded" [disabled]="!form.valid" label="Submit"></button>
+    </footer>
+</form>

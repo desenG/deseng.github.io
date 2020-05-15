@@ -18,10 +18,12 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { InplaceModule } from 'primeng/inplace';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { ButtonModule } from 'primeng/button';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { CheckboxModule } from 'primeng/checkbox';
 import { CalendarModule } from 'primeng/calendar';
+import { ChipsModule } from 'primeng/chips';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -44,6 +46,9 @@ import { CalendarModule } from 'primeng/calendar';
     AutoCompleteModule,
     CheckboxModule,
     CalendarModule,
+    ChipsModule,
+    InputTextareaModule,
+    ButtonModule,
     SharedModule,
     HomeRoutingModule
   ],

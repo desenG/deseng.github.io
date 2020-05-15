@@ -6,14 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+    ngOnInit(): void {
+    }
 
-  isExpanded: boolean;
-  constructor() { }
+  isExpanded = false;
 
-  ngOnInit() {
+  collapse() {
+    this.isExpanded = false;
   }
 
   toggle() {
-
+    this.isExpanded = !this.isExpanded;
   }
 }
