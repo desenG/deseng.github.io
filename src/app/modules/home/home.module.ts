@@ -19,6 +19,9 @@ import { InplaceModule } from 'primeng/inplace';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ButtonModule } from 'primeng/button';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { CheckboxModule } from 'primeng/checkbox';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -38,6 +41,9 @@ import { ButtonModule } from 'primeng/button';
     MatDatepickerModule,
     MatNativeDateModule,
     ButtonModule,
+    AutoCompleteModule,
+    CheckboxModule,
+    CalendarModule,
     SharedModule,
     HomeRoutingModule
   ],

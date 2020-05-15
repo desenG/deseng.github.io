@@ -1,3 +1,10 @@
+https://itnext.io/create-your-website-for-free-with-github-pages-angular-4a932a2de309
+https://github.com/desenG/deseng.github.io
+// Push your file to github
+git add --all 
+git commit -m "new commit" 
+git push -u origin dev
+
 ng build --prod --base-href 'https://deseng.github.io/'
 ngh --message="Commit message"
 ngh —branch=master
