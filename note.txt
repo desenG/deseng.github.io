@@ -1,0 +1,5 @@
+ng build --prod --base-href 'https://deseng.github.io/'
+ngh --message="Commit message"
+ngh —branch=master
+ngh --dry-run
+ngh

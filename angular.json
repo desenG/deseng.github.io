@@ -5,11 +5,7 @@
   "projects": {
     "ClientApp": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "less"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -28,7 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           },
@@ -92,7 +94,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           }
@@ -123,6 +131,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ClientApp"
+    }
+  },
+  "defaultProject": "ClientApp",
+  "cli": {
+    "analytics": false
+  }
 }
