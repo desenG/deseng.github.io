@@ -231,6 +231,10 @@ primeng/chips
 
 primeng/dropdown
 
+primeng/inputmask
+
+primeng/message
+
 regenerator-runtime
 MIT
 MIT License
