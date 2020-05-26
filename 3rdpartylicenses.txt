@@ -227,6 +227,8 @@ SOFTWARE.
 primeng
 MIT
 
+primeng/api
+
 primeng/calendar
 
 primeng/chips
